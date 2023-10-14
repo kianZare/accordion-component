@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddNewNote = ({setNotes}) => {
+const AddNewNote = ({onAddNote}) => {
   const [title, setTitle] = useState("");
   const [description,setDescription] = useState("");
   const handleSubmit = (e) => {
@@ -16,7 +16,7 @@ const AddNewNote = ({setNotes}) => {
     }
     setTitle("")
     setDescription("")
-    setNotes((prevNotes) => [...prevNotes,newNote])
+    onAddNote(newNote)
   };
 
   return (
