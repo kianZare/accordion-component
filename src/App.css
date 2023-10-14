@@ -1,22 +1,44 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+  @media only screen and (min-width: 420px){
+    padding: 2rem;
+
+  }
+
 }
 
 .note-header {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--text-400);
+  padding: 0 0 0.5rem;
+
+  @media only screen and (min-width: 420px) {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 3rem;
   border-bottom: 1px solid var(--text-400);
+  
+
+  }
 }
 
+
 .note-app {
-  display: flex;
   justify-content: space-between;
   gap: 2rem;
+
+  @media only screen and (min-width: 420px){
+    display: flex;
+
+  }
+
 }
 
 .note-form {
@@ -25,11 +47,20 @@
 }
 
 .add-new-note {
-  width: 30%;
+  width: 100%;
+  margin-bottom: 2rem;
+  @media only screen and (min-width: 420px){
+    width: 30%;
+  }
 }
 
 .note-container {
-  width: 60%;
+  width: 100%;
+  @media only screen and (min-width: 420px){
+    width: 60%;
+
+  }
+
 }
 
 .note-status {
